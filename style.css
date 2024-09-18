@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  width: 100px;
+}
+
+#burger {
+  display: none;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Make sure it is above other content */
+}
+
+/* Style for the popup content */
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.drawer-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.drawer-menu.show {
+  display: block;
+}
+
+.drawer-menu a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.drawer-menu a:hover {
+  background-color: #ddd;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.icons-flex {
+  display: flex;
+  gap: 5px;
+}
+
+.icons-flex a {
+  cursor: pointer;
+}
+
+.icons-flex i {
+  color: #8d39ec;
+}
+
+.icons-flex i:hover {
+  color: #411377;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+li {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  line-height: 35px;
+  margin-top: 15px;
+}
+
+a {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 65px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #053b33;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 35px;
+  color: #053b33;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 35px;
+  color: #f47e1f;
+  text-transform: capitalize;
+}
+
+h4 {
+  color: #f47e1f;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: white;
+  color: #333;
+  padding: 10px 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-transform: lowercase;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05); /* Zoom effect */
+}
+
+.container {
+  max-width: 1400px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro {
+  margin-top: 80px;
+}
+
+.intro-text {
+  width: 40%;
+}
+
+.intro-flex {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.right-img {
+  width: 50%;
+}
+
+.intro img {
+  width: 100%;
+}
+
+.intro h2 {
+  text-align: start;
+  margin-left: 0;
+}
+
+.contribution,
+.learned {
+  background-color: #f3f4f4;
+}
+
+.learned-flex {
+  display: flex;
+}
+
+.left-text {
+  width: 50%;
+}
+
+.right-image {
+  width: 50%;
+}
+
+.learned img {
+  width: 100%;
+}
+
+.test-img img {
+  width: 100%; /* Ensures the image takes up the full width of its container */
+  height: auto; /* Maintains the aspect ratio of the image */
+  max-width: 1400px; /* Prevents the image from exceeding the container's width */
+  display: block;
+}
+
+.contri-subtitle {
+  display: inline-block;
+}
+
+.contri-subtitleflex i {
+  font-size: 40px;
+  color: white;
+  background-color: #f47e1f;
+  padding: 20px 25px;
+  border-radius: 50%;
+}
+
+.contri-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 40px; /* Adjust the gap between grid items */
+}
+
+.grid-item:first-child {
+  grid-column: 1 / 2; /* Place the first item in the first column */
+  grid-row: 1 / 2; /* Place it in the first row */
+}
+
+.grid-item:nth-child(2) {
+  grid-column: 2 / 3; /* Place the second item in the second column */
+  grid-row: 2 / 3; /* Place it in the second row */
+}
+
+.plan-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.left-img {
+  width: 50%;
+}
+
+.plan-flex img {
+  width: 100%;
+}
+
+.right-text {
+  width: 50%;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+  gap: 20px; /* Adjust the gap between cards */
+}
+
+.plan-card {
+  background: #f0f0f0; /* Example background */
+  padding: 20px 40px;
+  border: 1px solid #ddd;
+}
+
+#toggle {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  border-radius: 100px;
+  background: #7827e6;
+  transition: 0.5s;
+}
+
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+}
+
+#toggle.active .indicator {
+  left: 40px;
+}
+
+/* toggle for the test in process section */
+.title {
+  cursor: pointer;
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.details {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 10px;
+}
+
+ol {
+  margin: 60px 40px;
+  text-indent: 15px;
+}
+
+.centre-text {
+  width: 50%;
+}
+
+.test-toggle .details {
+  display: none; /* Initially hide the details */
+}
+
+.test-toggle.open .details {
+  display: block; /* Show details when toggled */
+}
+
+.toggle-icon {
+  font-size: 14px; /* Adjust size as needed */
+  margin-left: 10px; /* Spacing between text and icon */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for icon rotation and color change */
+  color: #f47e1f;
+}
+
+.test-toggle.open .toggle-icon {
+  transform: rotate(180deg); /* Rotate the icon */
+  color: #053b33;
+}
+
+.conclusion {
+  text-align: center;
+  padding: 100px 150px;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding-top: 150px;
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
+
+  #social-icons {
+    display: none; /* Hide social icons on phone screens */
+  }
+
+  .popup-content i {
+    font-size: 60px;
+  }
+
+  #burger {
+    display: block; /* Show burger menu */
+  }
+
+  /* Optional: Style for when the drawer is open */
+  .drawer-open #social-icons {
+    display: flex; /* Show social icons when drawer is open */
+    /* You can add more styles for transition effects here */
+  }
+
+  .intro-flex,
+  .learned-flex,
+  .plan-flex {
+    flex-direction: column;
+  }
+
+  .intro-text,
+  .right-img,
+  .left-text,
+  .right-image,
+  .left-img,
+  .right-text,
+  .centre-text {
+    width: 100%;
+  }
+
+  .icons-flex {
+    justify-content: center; /* Align icons in the center */
+    padding-top: 20px;
+  }
+
+  .conclusion {
+    text-align: left;
+    padding: 80px 10px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .contri-grid {
+    grid-template-columns: 1fr; /* Change to a single column */
+    grid-template-rows: auto auto; /* Keep two rows */
+  }
+
+  .grid-item:first-child {
+    grid-column: 1 / 2; /* Span the entire first row */
+    grid-row: 1 / 2;
+  }
+
+  .grid-item:nth-child(2) {
+    grid-column: 1 / 2; /* Move to the second row */
+    grid-row: 2 / 3;
+  }
+
+  .grid-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  .plan-grid {
+    grid-template-columns: 1fr;
+    gap: 20px; /* Adjust the gap between cards */
+  }
+  .plan-card {
+    width: 100%;
+  }
+}

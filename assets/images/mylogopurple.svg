@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 216 216">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #7827e6;
+        font-family: Montserrat-Regular, Montserrat;
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+        stroke: #7827e6;
+        stroke-miterlimit: 10;
+        stroke-width: .75px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="32" y1="93" x2="184" y2="93" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7827e6"/>
+      <stop offset="1" stop-color="#aa4ff6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="31.5" y1="138" x2="183.5" y2="138" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7827e6"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="m172,55v32h-52v-32h-19.7l-30.3,30-29.3-30h-8.7v76h7.7l30.3-30,29.3,30h-59.6s68.3,0,68.3,0h12v-32h52v32h12V55h-12Zm-64,67.83l-30-29.83,30-29.78v59.6Z"/>
+  <text class="cls-2" transform="translate(32.24 153.14) scale(1.04 1)"><tspan x="0" y="0">GRAPHIC | WEB DESIGN</tspan></text>
+  <line class="cls-3" x1="31.5" y1="138" x2="183.5" y2="138"/>
+</svg>
